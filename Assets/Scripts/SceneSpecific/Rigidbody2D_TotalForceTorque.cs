@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Rigidbody2D_TotalForceTorque : MonoBehaviour
 {
+#if UNITY_2022_OR_NEWER            
     public bool ResetForce;
     public bool ResetTorque;
     public bool SetTotalForce;
@@ -33,4 +34,5 @@ public class Rigidbody2D_TotalForceTorque : MonoBehaviour
         if (ResetTorque)
             body.totalTorque = 0f;
     }
+#endif
 }

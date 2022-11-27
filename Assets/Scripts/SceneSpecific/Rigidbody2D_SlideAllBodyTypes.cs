@@ -8,6 +8,8 @@ public class Rigidbody2D_SlideAllBodyTypes : MonoBehaviour
 
     private Rigidbody2D m_Rigidbody;
     private float m_Time;
+    
+#if UNITY_2022_OR_NEWER    
     private Rigidbody2D.SlideMovement m_SlideMovement;
 
     void Start()
@@ -35,4 +37,5 @@ public class Rigidbody2D_SlideAllBodyTypes : MonoBehaviour
         if (Application.isPlaying && m_Rigidbody)
             m_Rigidbody.bodyType = BodyType;
     }
+#endif
 }

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Rigidbody2D_VelocityXY : MonoBehaviour
 {
+#if UNITY_2022_OR_NEWER            
     public float velocityX;
     public float velocityY;
 
@@ -17,4 +18,5 @@ public class Rigidbody2D_VelocityXY : MonoBehaviour
         m_Rigidbody.velocityX = velocityX;
         m_Rigidbody.velocityY = velocityY;
     }
+#endif
 }

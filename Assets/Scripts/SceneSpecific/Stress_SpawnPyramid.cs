@@ -2,7 +2,8 @@
 
 public class Stress_SpawnPyramid : MonoBehaviour
 {
-    [Range(1, 10000)]
+#if UNITY_2022_OR_NEWER            
+	[Range(1, 10000)]
     public int m_SpawnCount = 20;
 
     [Range(0, 10)]
@@ -86,4 +87,5 @@ public class Stress_SpawnPyramid : MonoBehaviour
 			y += m_SpacingY;
 		}
     }
+#endif
 }

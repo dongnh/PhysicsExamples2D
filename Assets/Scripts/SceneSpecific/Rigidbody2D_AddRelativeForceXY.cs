@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Rigidbody2D_AddRelativeForceXY : MonoBehaviour
 {
+#if UNITY_2022_OR_NEWER            
     public float forceX;
     public float forceY;
 
@@ -17,5 +18,5 @@ public class Rigidbody2D_AddRelativeForceXY : MonoBehaviour
         m_Rigidbody.AddRelativeForceX(forceX);
         m_Rigidbody.AddRelativeForceY(forceY);
     }
-
+#endif
 }

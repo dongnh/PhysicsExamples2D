@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Rigidbody2D_SlideMoveSlideAngle : MonoBehaviour
 {
+#if UNITY_2022_OR_NEWER       
+    
     [Range(0f, 90f)]
     public float SlideAngle = 90f;
 
@@ -9,6 +11,7 @@ public class Rigidbody2D_SlideMoveSlideAngle : MonoBehaviour
     public float Speed = 3f;
 
     private Rigidbody2D m_Rigidbody;
+
 
     private Rigidbody2D.SlideMovement m_SlideMovement = new Rigidbody2D.SlideMovement();
 
@@ -22,4 +25,5 @@ public class Rigidbody2D_SlideMoveSlideAngle : MonoBehaviour
         m_SlideMovement.surfaceSlideAngle = SlideAngle;
         m_Rigidbody.Slide(Vector2.right * Speed, Time.deltaTime, m_SlideMovement);
     }
+#endif
 }

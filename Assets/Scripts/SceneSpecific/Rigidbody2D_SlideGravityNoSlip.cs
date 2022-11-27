@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Rigidbody2D_SlideGravityNoSlip : MonoBehaviour
 {
+#if UNITY_2022_OR_NEWER            
     public Vector2 Gravity;
 
     private Rigidbody2D m_Rigidbody;
@@ -19,4 +20,5 @@ public class Rigidbody2D_SlideGravityNoSlip : MonoBehaviour
 
         m_Rigidbody.Slide(Vector2.zero, Time.deltaTime, m_SlideMovement);
     }
+#endif
 }

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Joint2D_BreakAction : MonoBehaviour
 {
+#if UNITY_2022_OR_NEWER            
     void OnJointBreak2D(Joint2D joint)
     {
         string message;
@@ -29,4 +30,5 @@ public class Joint2D_BreakAction : MonoBehaviour
 
         GetComponentInChildren<TextMesh>().text = message;
     }
+#endif
 }

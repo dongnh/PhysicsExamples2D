@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Collider2D_CreateMeshDelaunay : MonoBehaviour
 {
+#if UNITY_2022_OR_NEWER            
     public bool UseDelaunayMesh;
 
     private Collider2D m_Collider;
@@ -51,4 +52,5 @@ public class Collider2D_CreateMeshDelaunay : MonoBehaviour
     {
         DestroyMesh();
     }
+#endif
 }

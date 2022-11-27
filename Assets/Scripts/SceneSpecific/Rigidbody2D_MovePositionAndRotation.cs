@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Rigidbody2D_MovePositionAndRotation : MonoBehaviour
 {
+#if UNITY_2022_OR_NEWER            
     public enum MoveMode
     {
         None,
@@ -54,4 +55,5 @@ public class Rigidbody2D_MovePositionAndRotation : MonoBehaviour
         }
 
     }
+#endif
 }

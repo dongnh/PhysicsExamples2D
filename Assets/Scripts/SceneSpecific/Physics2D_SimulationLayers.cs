@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Physics2D_SimulationLayers : MonoBehaviour
 {
+#if UNITY_2022_OR_NEWER            
     public LayerMask SimulationLayers = Physics2D.AllLayers;
     public SimulationMode2D SimulationMode = SimulationMode2D.FixedUpdate;
 
@@ -35,4 +36,5 @@ public class Physics2D_SimulationLayers : MonoBehaviour
             Physics2D.simulationMode = SimulationMode;
         }
     }
+#endif
 }
